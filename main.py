@@ -38,7 +38,7 @@ async def handle_message(update: Update, context: ContextTypes.DEFAULT_TYPE):
             "Content-Type": "application/json"
         }
         data = {
-            "model": "google/gemini-1.5-flash",
+            "model": "google/gemini-flash-1.5",
             "messages": [{"role": "user", "content": user_text}]
         }
         
