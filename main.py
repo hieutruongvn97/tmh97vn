@@ -38,8 +38,9 @@ async def handle_message(update: Update, context: ContextTypes.DEFAULT_TYPE):
             "Content-Type": "application/json"
         }
         data = {
-            "model": "google/gemini-3.5-flash",
-            "messages": [{"role": "user", "content": user_text}]
+            "model": "google/gemini-3.5-flash-lite",
+            "messages": [{"role": "user", "content": user_text}],
+            "max_tokens": 500
         }
         
         res = requests.post("https://openrouter.ai/api/v1/chat/completions", json=data, headers=headers, timeout=30)
